@@ -4,8 +4,8 @@ package com.zipcodewilmington.assessment1.part3;
  * Created by leon on 2/16/18.
  */
 public abstract class Pet implements Animal {
-    private String name;
-    private Integer age;
+    protected String name;
+    protected Integer age;
 
     /**
      * nullary constructor
@@ -43,14 +43,14 @@ public abstract class Pet implements Animal {
     /**
      * @return name of this pet
      */
-    public String getName() {
+    protected String getName() {
         return this.name;
     }
 
     /**
      * @return age of this pet
      */
-    public Integer getAge() {
+    protected Integer getAge() {
         return this.age;
     }
 
