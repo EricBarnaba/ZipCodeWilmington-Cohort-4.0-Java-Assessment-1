@@ -4,45 +4,54 @@ package com.zipcodewilmington.assessment1.part3;
  * Created by leon on 2/16/18.
  */
 public abstract class Pet implements Animal {
+    private String name;
+    private Integer age;
+
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
      */
     public Pet() {
+        this.age = 0;
+        this.name = "";
     }
 
     /**
      * @param name name of this pet
      */
     public Pet(String name) {
+        this.name = name;
     }
 
 
     /**
      * @param age age of this pet
      */
-    public Pet(int age) {
+    public Pet(Integer age) {
+        this.age = age;
     }
 
     /**
      * @param name name of this pet
      * @param age age of this pet
      */
-    public Pet(String name, int age) {
+    public Pet(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 
     /**
      * @return name of this pet
      */
     public String getName() {
-        return null;
+        return this.name;
     }
 
     /**
      * @return age of this pet
      */
     public Integer getAge() {
-        return null;
+        return this.age;
     }
 
     /**

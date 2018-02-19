@@ -6,7 +6,7 @@ package com.zipcodewilmington.assessment1.part1;
 public class RockPaperSissorsEvaluator {
     protected static final String ROCK = "rock";
     protected static final String PAPER = "paper";
-    protected static final String SCISSOR = "scissor";
+    protected static final String SCISSOR = "scissors";
 
     /**
      * @param handSign a string representative of a hand sign
@@ -14,14 +14,14 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinningMove(String handSign) {
         switch(handSign){
-            case "rock":
-                return "paper";
+            case ROCK:
+                return PAPER;
 
-            case "paper":
-                return "scissors";
+            case PAPER:
+                return SCISSOR;
 
-            case "scissors":
-                return "rock";
+            case SCISSOR:
+                return ROCK;
         }
         return null;
     }
@@ -32,14 +32,14 @@ public class RockPaperSissorsEvaluator {
      */
     public String getLosingMove(String handSign) {
         switch(handSign){
-            case "rock":
-                return "scissors";
+            case ROCK:
+                return SCISSOR;
 
-            case "paper":
-                return "rock";
+            case PAPER:
+                return ROCK;
 
-            case "scissors":
-                return "paper";
+            case SCISSOR:
+                return PAPER;
         }
         return null;
     }
