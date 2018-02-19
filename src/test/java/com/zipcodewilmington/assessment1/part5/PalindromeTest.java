@@ -2,7 +2,7 @@ package com.zipcodewilmington.assessment1.part5;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+import java.util.Arrays;
 public class PalindromeTest {
 
     @Test
@@ -63,4 +63,45 @@ public class PalindromeTest {
         Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void substringMakerTest(){
+        //Given
+        String originalString = "aaa";
+
+        //When
+        int expected = 6;
+        int actual = Palindrome.substringMaker(originalString).length;
+
+        //Then
+        System.out.println(Arrays.toString(Palindrome.substringMaker(originalString)));
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void isPalindromeTrueTest(){
+        //Given
+        String stringToTest = "abba";
+
+        //When
+        boolean expected = true;
+        boolean actual = Palindrome.isPalindrome(stringToTest);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void isPalindromeFalseTest(){
+        //Given
+        String stringToTest = "abbaz";
+
+        //When
+        boolean expected = false;
+        boolean actual = Palindrome.isPalindrome(stringToTest);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
 }
