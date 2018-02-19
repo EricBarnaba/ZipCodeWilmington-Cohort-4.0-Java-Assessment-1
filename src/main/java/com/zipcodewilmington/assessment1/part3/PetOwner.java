@@ -19,6 +19,7 @@ public class PetOwner {
             this.petList = new Pet[pets.length];
             for (int i = 0; i < pets.length; i++) {
                 this.petList[i] = pets[i];
+                pets[i].setOwner(this);
             }
         }
     }
@@ -29,6 +30,7 @@ public class PetOwner {
     public void addPet(Pet pet) {
         this.petList = Arrays.copyOf(this.petList, this.petList.length+1);
         this.petList[this.petList.length-1] = pet;
+        pet.setOwner(this);
     }
 
     /**

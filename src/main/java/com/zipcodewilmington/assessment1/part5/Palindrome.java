@@ -1,12 +1,13 @@
 package com.zipcodewilmington.assessment1.part5;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Palindrome {
 
     public Integer countPalindromes(String input){
         Integer palindromeCount = 0;
-        String[] splitIntoSubstrings = substringMaker(input);
+        LinkedList<String> splitIntoSubstrings = substringMaker(input);
         for (String s : splitIntoSubstrings){
             if(isPalindrome(s)){
                 palindromeCount++;
@@ -16,19 +17,18 @@ public class Palindrome {
         return palindromeCount;
     }
 
-    public static String[] substringMaker (String originalString){
-        String[] substringArray = new String[0];
+    public static LinkedList<String> substringMaker (String originalString){
+        LinkedList<String> substringList = new LinkedList<>();
         for(int i = 0; i<originalString.length();i++){
             for (int j = 1; j<=originalString.length();j++){
                 if(j<=i){
                     continue;
                 }
-                substringArray = Arrays.copyOf(substringArray, substringArray.length+1);
-                substringArray[substringArray.length-1] = originalString.substring(i,j);
+                substringList.add(originalString.substring(i,j));
             }
 
         }
-        return substringArray;
+        return substringList;
     }
 
     public static boolean isPalindrome (String stringToTest){

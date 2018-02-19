@@ -2,7 +2,7 @@ package com.zipcodewilmington.assessment1.part5;
 
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.Arrays;
+import java.util.LinkedList;
 public class PalindromeTest {
 
     @Test
@@ -71,10 +71,9 @@ public class PalindromeTest {
 
         //When
         int expected = 6;
-        int actual = Palindrome.substringMaker(originalString).length;
+        int actual = Palindrome.substringMaker(originalString).size();
 
         //Then
-        System.out.println(Arrays.toString(Palindrome.substringMaker(originalString)));
         Assert.assertEquals(expected,actual);
     }
 
